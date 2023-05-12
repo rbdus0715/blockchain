@@ -142,7 +142,7 @@ def is_valid():
     print(response)
     return jsonify(response), 200
 
-@app.route('/add_transaction', method=['POST'])
+@app.route('/add_transaction', methods=['POST'])
 def add_transaction():
     json = request.get_json()
     transaction_keys = ['sender', 'receiver', 'amount']
